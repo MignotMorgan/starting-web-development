@@ -1,20 +1,30 @@
 :root{
   --Color-Red : #FF3636;
+  --Color-Dark:darkgrey;
+  --Color-Light:lightgrey;
 }
 body{
   padding-left: 20%;
   padding-right: 20%;
   padding-top: 50px;
-  background-color: lightgrey;
-  color:darkgrey;
+
+  background-color: var(--Color-Light);
+
+  color:var(--Color-Dark);
 }
 section{
   background-color: white;
   text-align: center;
   padding: 25px;
   margin-top: 20px;
+
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px darkgrey;
+
+  -webkit-box-shadow: 2px 2px 2px var(--Color-Dark);
+  -moz-box-shadow: 2px 2px 2px var(--Color-Dark);
+  box-shadow: 2px 2px 2px var(--Color-Dark);
   font-family: "Open Sans";
 }
 ul{
@@ -25,43 +35,52 @@ li{
   padding: 10px;
 }
 a{
-  color:darkgrey;
+  color:var(--Color-Dark);
   text-decoration: none;
 }
 i{
   font-size:200%;
 }
-#img-photo{
+.img-photo{
   width: 25%;
-  border: 7px lightgrey solid;
+  
+  border: 7px var(--Color-Light) solid;
   border-radius: 50%;
-  borde
 }
-#title-Tim{
+.title-Tim{
   color: var(--Color-Red);
   font-weight: bold;
 }
-#span-his{
-  background-color: lightgrey;
+.span-his{
+  background-color: var(--Color-Light);;
 }
 .social{
   display:inline-flex;
 }
-
-.btn-see{
-  background-color: var(--Color-Red);
-  border-color: red;
+.btn{
   border-width: 2px;
   padding: 10px;
   border-radius: 5px;
-  color: white;
 }
-li:hover > a{
+  .btn--red{
+    background-color: var(--Color-Red);
+    border-color: red;
+
+    color: white;
+  }
+  .btn--red:hover{
+    background-color: red;
+  }
+li:hover  a{
   color:black;
+}
+.td--portrait{
+  width: 25%;
+  padding: 5%;
+}
+.img--film{
+  width: 100%;
 }
 /*li:hover{
   color:black;
 }*/
-.btn-see:hover{
-  background-color: red;
-}
